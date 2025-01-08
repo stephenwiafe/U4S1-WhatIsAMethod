@@ -21,6 +21,7 @@ public class Tip01 {
             double amount = amt[i];
             double total = amount + (amount * tax) + (amount * tip);
             System.out.printf("Person %d after taxes: $%.0f%n", i + 1, total);
+
         }
     }
 }
