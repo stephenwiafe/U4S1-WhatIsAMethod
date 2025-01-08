@@ -15,7 +15,16 @@ public class CalculatorTest4 {
         calc.findTotal(11, null);
         calc.findTotal(30, "Forgetful");
 
-        //Find and print the entire table's total, including tax and tip
+        String[] names = {"Person 1", "Person 2", "Person 3", "Person 4", "Person 5", "Alex", "Person 7", "Forgetful"};
+        double[] prices = {10, 12, 9, 8, 7, 15, 11, 30};
 
+        double tot = 0.0;
+
+        //Find and print the entire table's total, including tax and tip
+        for (int i = 0; i < prices.length; i++) {
+            calc.findTotal(prices[i], names[i]);
+            tot += prices[i] * (1 + calc.tax + calc.tip);
+        }
+        System.out.println("\n$" + tot);
     }
 }

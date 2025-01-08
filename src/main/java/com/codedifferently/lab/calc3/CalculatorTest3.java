@@ -7,7 +7,7 @@ public class CalculatorTest3 {
 
         //Use the Calculator object and arguments supplied to findTotal()
         //to print the total for each person
-
+        double[] amounts = {10.0, 12.0, 9.0, 8.0, 7.0, 15.0, 11.0, 30.0};
 
 
        /*This is what everyone owes before tax and tip:
@@ -20,5 +20,9 @@ public class CalculatorTest3 {
        Person 7: $11
        Person 8: $30
        */
+        for (int i = 0; i < amounts.length; i++) {
+            System.out.print("Person " + (i + 1) + ": ");
+            calc.findTotal(amounts[i]);
+        }
     }
 }
